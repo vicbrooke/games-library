@@ -1,0 +1,23 @@
+As a user, I want to see the games displayed neatly on the index page so I can easily browse through them.
+
+As a user, I want to be able to filter games by platform and genre.
+
+As a user, I want to be able to sort games by alphabetical, release date and popularity.
+
+As a user, I want to see the URL change as I move through different parts of the application, so that I can bookmark my favorite page and share it with friends.
+
+As a user, I want the app to be dynamic and interactive.
+
+As a user, I want the app to dynamically swap the content out on the page using react router when I’m navigating to another section of the app to make the experience smoother.
+
+As a user I want to be able to click on a game in order to see more details 
+
+As a user, I want the URL to change to include the game I’m looking at.
+
+As a user, I want to be able to favourite a game.
+
+As a user, I want to be able to navigate to a favourites page to view the games I have favourited.
+
+As a user, I want to be able to search through the games displayed on the home page.
+
+As a user, I want there to be a nav-bar so that I can easily navigate through the app.
