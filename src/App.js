@@ -1,8 +1,9 @@
-
-import { useEffect } from 'react';
-import './App.css';
+import { useEffect, useState } from 'react';
+import './_App.scss';
+import {Card} from "react-bootstrap"
 
 function App() {
+  const [games, setGames] = useState([])
 
   const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games';
   const options = {
@@ -22,11 +23,26 @@ function App() {
 
     // })
     .then(res => res.json())
-    .then(data => console.log(data))
-  })
+    .then(data => setGames(data))
+  },[])
 
   return (
-    <div className="App">
+    <div className="App"> 
+    {console.log(games)}
+    <div className="card-container">
+      {games.map(game => {
+        return (<Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>{game.title}</Card.Title>
+          <Card.Img src={game.thumbnail} alt="Card image cap"/>
+          <Card.Text>{game.short_description}</Card.Text>
+          <div className="tags">
+          <Card.Text>{game.platform}</Card.Text>
+          <Card.Text>{game.genre}</Card.Text>
+          </div>
+        </Card.Body>
+      </Card>)})}
+    </div>
     </div>
   );
 }
