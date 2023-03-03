@@ -1,0 +1,45 @@
+.favourites-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align:center ;
+    padding-top: 1vw;
+    height: 100vh;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    .card{
+     height: 25em;
+     margin: 1%;
+     .card-body {
+         display: grid;
+         grid-template-rows: 0.5fr auto 1fr 0.5fr;
+         height: 100%;
+         padding-bottom: 0%;
+         .card-title{
+             width: 100%;
+             text-align: center;
+             justify-self: center;
+             align-self: center;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+         }
+         .card-text{
+             overflow: hidden;
+             -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+         }
+         .card-img{
+             margin-bottom: 5%;
+         }
+         .tags{
+             align-self: flex-end;
+             display: flex;
+             justify-content: space-between;
+         }
+     }
+    }
+ }

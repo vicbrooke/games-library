@@ -1,0 +1,33 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+#root{
+    height: 100vh;
+    width: 100vw;
+}
+.home{
+    min-height: 100vh;
+    // background-color: rgb(237, 237, 237);
+    .home-container{
+        padding-top: 2em;
+        margin-left:auto;
+       margin-right: auto;
+    }
+    .filter-bar{
+        display: flex;
+        justify-content: center;
+        .flex-item{
+            margin: 2px;
+            display:inline;
+        }
+        .c-form-select{
+            align-self: center;
+        }
+    }
+    .card-container{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content:center ;
+    }
+}
