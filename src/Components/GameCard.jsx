@@ -13,7 +13,7 @@ export const GameCard = ({game}) => {
     useContext(FavouritesContext);
 
     return (
-        <Card data-testid="game-card" name={"card"} key={game.id} style={{ width: '18rem' }} onClick={()=> navigate(`/${game.id}`)}>
+        <Card tabIndex="0" data-testid="game-card" name={"card"} key={game.id} style={{ width: '18rem' }} onClick={()=> navigate(`/${game.id}`)}>
             <Card.Body>
             <Card.Title>{game.title}</Card.Title>
             <Card.Img src={game.thumbnail} alt="Card image cap"/>
@@ -24,7 +24,7 @@ export const GameCard = ({game}) => {
             
                 {favourites.includes(game.title) ? (
                     <div className="favourites-icon">
-                    <RemoveStar onClick={(e) => {
+                    <RemoveStar tabIndex="1" onClick={(e) => {
                         e.stopPropagation()
                         removeFavourite(game.title)
                     }}/>

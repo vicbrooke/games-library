@@ -139,10 +139,10 @@ function Home({games, filteredGames, setfilteredGames}){
                         >Clear</Button>
                     </div>
                 </section>
-            <div data-testid="games-container" className="card-container">
+            <div data-testid="games-container" tabIndex="0" className="card-container">
             {filteredGames.map(game => {
                 return (
-                    <GameCard game={game} key={game.id}/>
+                    <GameCard aria-role="button" game={game} key={game.id} tabIndex="1"/>
                 )})}
             </div>
             </section>
